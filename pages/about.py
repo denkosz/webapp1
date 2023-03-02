@@ -15,7 +15,8 @@ if camera_image:
 
     # Render the grayscale image on webpage
     st.image(gray_img)
-elif uploaded_image:
+    
+if uploaded_image:
     # Create a pillow image instance
     img = Image.open(uploaded_image)
 
