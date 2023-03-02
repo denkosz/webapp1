@@ -3,6 +3,7 @@ from PIL import Image
 
 with st.expander("Start Camera"):
     #Start the camera
+    uploaded_image = st.file_uploader("Upload Image")
     camera_image = st.camera_input("Camera")
 
 if camera_image:
