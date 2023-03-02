@@ -1,3 +1,15 @@
 import streamlit as st
+from PIL import Image
 
-st.write("Hello")
+#Start the camera
+camera_image = st.camera_input("Camera")
+print(camera_image)
+
+# Create a pillow image instance
+img = Image.open(camera_image)
+
+# Convert the pillow image to grayscale
+gray_img = img.convert("L")
+
+# Render the grayscale image on webpage
+st.image(gray_img)
